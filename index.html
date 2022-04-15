@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>TaskDo</title>
+</head>
+<body>
+   <main class="container">
+       <h1 class="title">
+           To Do List
+       </h1>
+
+       <form action="" class="form-add" id="form-add-js">
+           <input type="text" name="task" id="input-js" class="input-add" placeholder="Adicione uma tarefa">
+           <button type="submit" id="btn-add-js" class="btn-add">Adicionar</button>
+       </form>
+
+       <div class="container-task" id="task-js">
+            <ul class="task-list" id="task-list-js">
+                <li>
+                    <p>Item teste</p>
+                    <span>🗑</span>
+                </li> 
+            </ul>
+       </div>
+       <div class="container-buttons">
+           <button class="check-btn">Marcar todas</button>
+           <button class="clear-btn">Limpar lista</button>
+       </div>
+       
+   </main>
+    
+</body>
+<script src="./js/main.js"></script>
+</html>
