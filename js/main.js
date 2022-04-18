@@ -2,11 +2,9 @@ const btnAdd = document.querySelector("#btn-add-js");
 
 btnAdd.addEventListener("click", (event)=>{
     event.preventDefault()
-//    console.log(btnAdd)
 
     var form = document.querySelector("#form-add-js")
     var taskObj = getInfoFromInput(form)
-    // console.log(taskObj.task)
 
     const elementLi = createLi(taskObj)
 
@@ -14,15 +12,20 @@ btnAdd.addEventListener("click", (event)=>{
 
     invalidTask(elementLi)
 
-    if(taskObj.task === ""){
+    if(taskObj.task.trim() === ""){
         invalidTask(taskObj)
         insertErro(taskObj)
+        erroLetterRemove(taskObj)
         return false
-    }
-    if(taskObj.task.length > 0){
-        // console.log("tem letra")
+    }else{
         tiraErro(taskObj)
         createLi(taskObj)
+    }
+    if(taskObj.task.length > 18){
+        erroLetter(taskObj)
+        return false
+    }else{
+        erroLetterRemove(taskObj)
     }
 
     var taskList = document.querySelector("#task-list-js")

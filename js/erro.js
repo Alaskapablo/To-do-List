@@ -10,20 +10,26 @@ const tiraErro = ()=>{
     inputTask.classList.remove("invalid")
     const erroSpan = document.querySelector(".error-form")
     erroSpan.classList.remove("span-erro")
+    
 
     
 }
 
 const insertErro = ()=>{
-
     const erroSpan = document.querySelector(".error-form")
     erroSpan.classList.add("span-erro")
-   
 
-    let erro = document.createElement('span')
-    erro.textContent = "Digite uma tarefa"
-    
-    
-    erro.innerHTML = ""
-    erro.insertAdjacentHTML('afterbegin', erro)
 }
+
+const erroLetter = ()=>{
+    const spanErro = document.querySelector(".error-form-letter")
+    spanErro.classList.add("error-letter")
+
+}
+
+const erroLetterRemove = ()=>{
+    const spanErroRemove = document.querySelector(".error-form-letter")
+    spanErroRemove.classList.remove("error-letter")
+}
+erroLetter()
+erroLetterRemove()

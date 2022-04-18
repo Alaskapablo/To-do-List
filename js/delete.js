@@ -1,6 +1,5 @@
-const del = document.querySelector(".container-task")
- console.log(del)
-
+const del = document.querySelector("#task-list-js")
+ 
 del.addEventListener('click', (e)=>{
     e.target.parentNode.classList.add("fade-out")
 
@@ -10,21 +9,12 @@ del.addEventListener('click', (e)=>{
     },300)
 })
 
-function deleteAll(){ 
 
-    const delAll = document.querySelector(".clear-btn")
+// const btnDel = document.querySelector(".clear-btn")
 
-    delAll.addEventListener('click', (e)=>{
-        e.preventDefault()
-        console.log("click")
+// btnDel.addEventListener('click', ()=>{
+//     const delAll = document.querySelectorAll("#task-list-js")
 
-        document.getElementById("task-js").innerHTML = ""
-       
-    })
 
-}
-
-// function main(){
-//     del()
-//     delAll(del)
-// }
+   
+// })
