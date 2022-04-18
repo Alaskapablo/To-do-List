@@ -2,31 +2,38 @@ const btnAdd = document.querySelector("#btn-add-js");
 
 btnAdd.addEventListener("click", (event)=>{
     event.preventDefault()
-    // console.log(btnAdd)
+//    console.log(btnAdd)
 
     var form = document.querySelector("#form-add-js")
     var taskObj = getInfoFromInput(form)
     // console.log(taskObj.task)
-   
+
     const elementLi = createLi(taskObj)
-   
+
+    createLi(form)
+
+    invalidTask(elementLi)
+
+    if(taskObj.task === ""){
+        invalidTask(taskObj)
+        insertErro(taskObj)
+        return false
+    }
+    if(taskObj.task.length > 0){
+        // console.log("tem letra")
+        tiraErro(taskObj)
+        createLi(taskObj)
+    }
 
     var taskList = document.querySelector("#task-list-js")
+    
     taskList.appendChild(elementLi)
+    form.reset() 
 
-    form.reset()
 })
 
-
-// var taskValid = 
-
-// function validTask(taskObj){
-//     if(taskObj.task < 0){
-       
-//     }
-// }
-
 function createLi(taskObj){
+
     const elementLi = document.createElement('li')
     elementLi.classList.add("task-item")
 
@@ -37,7 +44,7 @@ function createLi(taskObj){
     const textTask = document.createElement('p')
     textTask.classList.add("task-text")
 
-    const iconDel = document.createElement('span')
+    const iconDel = document.createElement('button')
     iconDel.classList.add("del-task")
 
     textTask.textContent = taskObj.task
@@ -47,6 +54,7 @@ function createLi(taskObj){
     elementLi.appendChild(iconDel)
    
     return elementLi;
+  
 }
 
 function getInfoFromInput(form){

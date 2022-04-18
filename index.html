@@ -18,10 +18,10 @@
        </h1>
 
        <form action="" class="form-add" id="form-add-js">
-           <span class="error-form"></span>
            <input type="text" name="task" id="input-js" class="input-add" placeholder="Adicione uma tarefa">
            <button type="submit" id="btn-add-js" class="btn-add">Adicionar</button>
        </form>
+       <span class="error-form"></span>
 
        <div class="container-task" id="task-js">
             <ul class="task-list" id="task-list-js">
@@ -33,7 +33,7 @@
             </ul>
        </div>
        <div class="container-buttons">
-           <button class="check-btn">Marcar todas</button>
+           <button class="check-btn" onclick="deleteAll()">Marcar todas</button>
            <button class="clear-btn">Limpar lista</button>
        </div>
        
@@ -41,4 +41,6 @@
     
 </body>
 <script src="./js/main.js"></script>
+<script src="./js/erro.js"></script>
+<script src="./js/delete.js"></script>
 </html>

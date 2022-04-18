@@ -9,7 +9,8 @@
 body {
     min-height: 100vh;
     width: 100%;
-    background-color: #0C0C0C;
+    background: linear-gradient(to bottom right,
+    #DD95F7 0%, #9AADF9 50%, #7FC9D9 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +20,8 @@ body {
     content: "🟣";
 }
 .container{
-    background-color: #3F3D56;
+    background: linear-gradient(to bottom right,
+    #333333, #121212);
     min-width: 40rem; /* 400px */
     max-height: 100%;
     padding: 2.5rem;
@@ -160,6 +162,23 @@ input{
 }
 
 /* js */
+.invalid{
+    border: 2px solid #f03460;
+}
+.span-erro{
+    color: #f03460;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+}
+.span-erro::before{
+    content: 'Digite uma tarefa';
+}
+
 .error{
     animation: alerta .3s linear;
+}
+.fade-out{
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
 }
